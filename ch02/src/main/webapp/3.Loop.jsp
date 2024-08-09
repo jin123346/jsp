@@ -47,7 +47,7 @@
 	
 	<h4>구구단</h4>
 	
-	<table border="1" width="550">
+	<table border="1" width="750">
 		<tr>	
 			<th>2단</th>
 			<th>3단</th>
