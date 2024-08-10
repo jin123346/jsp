@@ -7,33 +7,33 @@
 </head>
 <body>
 
-	<h3>shop-customer 등록</h3>
+	<h3>Bank customer 등록</h3>
 	
 	<a href="/ch06/1.JDBCTest.jsp">처음으로</a><br>
-	<a href="/ch06/user1/register.jsp">등록</a><br>
+	<a href="/ch06/bank/customer/register.jsp">등록</a><br>
 	
 	
-	<form action="/ch06/user1/registerProc.jsp" method="post">
+	<form action="/ch06/bank/customer/registerProc.jsp" method="post">
 		<table border="1">
 			<tr>
-				<td>아이디</td>
-				<td><input type="text" name="uid"></td>
+				<td>주민번호</td>
+				<td><input type="text" name="c_no"></td>
 			</tr>
 			<tr>
-				<td>이름</td>
-				<td><input type="text" name="name"></td>
+				<td>고객명</td>
+				<td><input type="text" name="c_name"></td>
 			</tr>
 			<tr>
-				<td>생년월일</td>
-				<td><input type="date" name="birth"></td>
+				<td>계좌분류</td>
+				<td><input type="number" name="c_dis"></td>
 			</tr>
 			<tr>
 				<td>휴대폰</td>
-				<td><input type="text" name="hp"></td>
+				<td><input type="text" name="c_phone"></td>
 			</tr>
 			<tr>
-				<td>나이</td>
-				<td><input type="number" name="age"></td>
+				<td>주소</td>
+				<td><input type="text" name="c_addr"></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="right">

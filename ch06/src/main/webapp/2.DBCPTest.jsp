@@ -13,21 +13,21 @@
 <body>
 	<h3>2.DBCP</h3>
 	
-	<h4>shop</h4>
-	<a href="/ch06/shop/customer/list.jsp">customer</a>
-	<a href="/ch06/shop/customer/list.jsp">customer</a>
+		
+	<h4>shop 데이터베이스 CRUD</h4>
+	<a href="/ch06/shop/customer/list.jsp">shop-customer</a><br>
+	<a href="/ch06/shop/product/list.jsp">shop-product</a><br>
 	
-	<h4>bank</h4>
-	<a href="/ch06/bank/customer/list.jsp">customer</a>
-	<a href="/ch06/bank/account/list.jsp">account</a>
+	<h4>bank 데이터베이스 CRUD</h4>
+	<a href="/ch06/bank/customer/list.jsp">bank-customer</a><br>
+	<a href="/ch06/bank/account/list.jsp">bank-account</a><br>
 	
-	<h4>college</h4>
-	<a href="/ch06/college/customer/list.jsp">customer</a>
-	<a href="/ch06/college/lecture/list.jsp">lecture</a>
+	<h4>college 데이터베이스 CRUD</h4>
+	<a href="/ch06/college/student/list.jsp">college-student</a><br>
+	<a href="/ch06/college/lecture/list.jsp">college-lecture</a><br>
 	
-	<h4>theater</h4>
-	<a href="/ch06/theater/movie/list.jsp">movie</a>
-	<a href="/ch06/theater/customer/list.jsp">customer</a>
-	
+	<h4>theater 데이터베이스 CRUD</h4>
+	<a href="/ch06/theater/movies/list.jsp">theater-movies</a><br>
+	<a href="/ch06/theater/customers/list.jsp">theater-customers</a><br>
 </body>
 </html>
