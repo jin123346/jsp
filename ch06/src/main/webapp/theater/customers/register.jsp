@@ -7,17 +7,17 @@
 </head>
 <body>
 
-	<h3>shop customer 등록</h3>
+	<h3>Theater customers 등록</h3>
 	
 	<a href="/ch06/1.JDBCTest.jsp">처음으로</a><br>
-	<a href="/ch06/shop/customer/register.jsp">등록</a><br>
+	<a href="/ch06/theater/customers/register.jsp">등록</a><br>
 	
 	
-	<form action="/ch06/shop/customer/registerProc.jsp" method="post">
+	<form action="/ch06//theater/customers/registerProc.jsp" method="post">
 		<table border="1">
 			<tr>
 				<td>고객번호</td>
-				<td><input type="text" name="custId"></td>
+				<td><input type="number" name="customer_id"></td>
 			</tr>
 			<tr>
 				<td>이름</td>
@@ -25,15 +25,11 @@
 			</tr>
 			<tr>
 				<td>이메일</td>
-				<td><input type="text" name="hp"></td>
+				<td><input type="text" name="email"></td>
 			</tr>
 			<tr>
-				<td>주소</td>
-				<td><input type="text" name="addr"></td>
-			</tr>
-			<tr>
-				<td>가입일</td>
-				<td><input type="date" name="rdate"></td>
+				<td>휴대폰</td>
+				<td><input type="text" name="phone"></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="right">
