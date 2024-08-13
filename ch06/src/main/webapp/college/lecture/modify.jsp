@@ -1,5 +1,4 @@
 <%@page import="college.LectureVO"%>
-<%@page import="college.StudentVO"%>
 <%@page import="javax.sql.DataSource"%>
 <%@page import="javax.naming.InitialContext"%>
 <%@page import="javax.naming.Context"%>
