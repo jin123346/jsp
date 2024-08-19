@@ -1,28 +1,34 @@
-package controller.user1;
+package controller.product;
 
 import java.io.IOException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import service.User1Service;
+import service.ProductService;
 
-@WebServlet("/customer/delete.do")
+@WebServlet("/product/delete.do")
 public class DeleteController extends HttpServlet {
 	private static final long serialVersionUID = -6383548614151362954L;
-
-	private User1Service service = User1Service.getInstance();
+	
+	private ProductService service = ProductService.INSTANCE;
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		// 데이터 수신
-		String uid= req.getParameter("uid");
+		String prodNo= req.getParameter("prodNo");
+		logger.debug("custId : "+prodNo);
+		
 		//서비스 데이터 삭제
-		service.deleteUser1(uid);
+		service.deleteProduct(Integer.parseInt(prodNo));
 		//리다이렉트
-		resp.sendRedirect("/ch11/customer/list.do");
+		resp.sendRedirect("/ch11/product/list.do");
 		
 	}
 	

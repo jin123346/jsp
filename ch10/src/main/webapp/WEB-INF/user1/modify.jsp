@@ -11,8 +11,8 @@
 
 	<h3>User1 수정</h3>
 	
-		<a href="/ch10/">처음으로</a><br>
-		<a href="/ch10/user1/register.do">등록</a>
+		<a href="/ch11/">처음으로</a><br>
+		<a href="/ch11/customer/register.do">등록</a>
 	
 	
 	<form action="#" method="post">
