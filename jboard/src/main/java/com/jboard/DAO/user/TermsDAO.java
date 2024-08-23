@@ -1,4 +1,4 @@
-package com.jboard.DAO;
+package com.jboard.DAO.user;
 
 import java.util.ArrayList;
 import java.util.List;

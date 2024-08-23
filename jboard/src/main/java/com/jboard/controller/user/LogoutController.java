@@ -16,8 +16,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebServlet("/user/login.do")
-public class LoginController extends HttpServlet{
+@WebServlet("/user/logout.do")
+public class LogoutController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	
 	Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -26,42 +26,18 @@ public class LoginController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		//로그인 실패시 req쪽으로 넘어옴
+		//로그아웃 => session 속성 지우고, invalidate
+		HttpSession session = req.getSession();
+		session.removeAttribute("sessuser");
+		session.invalidate();
 		
-		
-		
-		String success = req.getParameter("success");
-		req.setAttribute("success", success);
-		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/user/login.jsp");
-		dispatcher.forward(req, resp);
-		
-		
-		
+		resp.sendRedirect("/jboard/user/login.do?success=101");
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		String uid= req.getParameter("uid");
-		String pass = req.getParameter("pass");
-		logger.debug("uid : "+uid);
-		logger.debug("pass : "+pass);
-
-		UserDTO user = service.selectUser(uid,pass);
-		logger.debug("user : "+user);
 		
-		
-		if(user != null) {
-			//회원이 맞을 경우 -> 세션 처리 후 , 리다이렉트
-			HttpSession session = req.getSession();
-			session.setAttribute("sessUser", user);
-			
-			resp.sendRedirect("/jboard/article/list.do");
-		}else {
-			//회원이 아닐경우
-			resp.sendRedirect("/jboard/user/login.do?success=100");
-		}
 		
 		
 		

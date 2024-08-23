@@ -21,7 +21,7 @@ public class RegisterController extends HttpServlet{
 	
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
-	private UserService service = UserService.INSTANCE;
+	private UserService service = UserService.getInstnace();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -45,7 +45,7 @@ public class RegisterController extends HttpServlet{
 		String addr1	= req.getParameter("addr1");
 		String addr2 	= req.getParameter("addr2");
 		
-		
+		String regip = req.getRemoteAddr();  // ip 주소를 가져옴
 		logger.debug(uid);
 		
 		//DTO 생성 -> 객체 생성
@@ -60,15 +60,24 @@ public class RegisterController extends HttpServlet{
 		user.setZip(zip);
 		user.setAddr1(addr1);
 		user.setAddr2(addr2);
+		user.setRegip(regip);
 		
 		
 		logger.debug(user.toString());
+		
+		
+		//아이디 중복체크 
+		
+		
+		
+		
+		
 		
 		//데이터 전송
 		service.insertUser(user);
 		
 		//리다이렉트
-		resp.sendRedirect("/jboard/article/list.do");
+		resp.sendRedirect("/jboard/user/login.do");
 		
 		
 		

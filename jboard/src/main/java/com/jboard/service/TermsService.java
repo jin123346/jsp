@@ -1,6 +1,6 @@
 package com.jboard.service;
 
-import com.jboard.DAO.TermsDAO;
+import com.jboard.DAO.user.TermsDAO;
 import com.jboard.dto.TermsDTO;
 
 public enum TermsService {
